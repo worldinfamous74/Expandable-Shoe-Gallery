@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    :root{
+        --bg: rgb(21, 146, 119);
+    }
+
+    body{
+        background: var(--bg);
+        display: grid;
+        place-items: center;
+        height: 70vh;
+    }
+
+    .h1{
+        color: rgb(232, 238, 238);
+    }
+    .gallery{
+        display: flex;
+        gap: 0.025rem;
+        max-width: 190rem;
+    }
+
+    .card{
+        position: relative;
+        left: 0;
+        width: 4rem;
+        border-radius: 1.2rem;
+        height: 20rem;
+        overflow: hidden;
+        cursor: pointer;
+        background: var(--bg);
+        transition: 0.4s ease-in-out;
+        box-shadow: 0 5px 12px #0000004d;
+        flex: 0.25;
+    }
+
+    .card img{
+        position: relative;
+        height: 20rem;
+        object-fit: cover;
+    }
+
+    /*If the pictures are plenty, 
+    change flex digits
+    &
+    border radius is how the side curve of the pictures are*/
+    .card:hover{
+        flex: 1;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 1rem;
+    }
+
+    /*It Centers the Images*/
+    .card:nth-child(1) img{
+        left: -1rem;
+    }
+
+    .card:nth-child(2) img{
+        left: -8em;
+    }
+
+    .card:nth-child(3) img{
+        left: -13rem;
+    }
+
+    .card:nth-child(4) img{
+        left: -16rem;
+    }
+        
+</style>
+<body>
+    <a href="index.html"><button onclick="BackHome('prod_xxxx2')"><== Back Home</button>
+    </a>
+    
+    <br>
+    <div class="gallery">
+        <figure class="card">
+            <img src="Img/Shoe (q).jpg" alt="Shoe 1">
+        </figure>
+
+        <figure class="card">
+            <img src="Img/Shoe (q).jpg" alt="Shoe 2">
+        </figure>
+
+        <figure class="card">
+            <img src="Img/Shoe (q).jpg" alt="Shoe 3">
+        </figure>
+
+        <figure class="card">
+            <img src="Img/Shoe (q).jpg" alt="Shoe 4">
+        </figure>
+    </div>
+
+    <a href="buy2.html">
+        <br>
+        <button onclick="Buy('prod_xxxx2')">Purchase</button>
+    </a>
+</body>
+</html>
